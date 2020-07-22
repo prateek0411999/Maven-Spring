@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">    
+    
+    <!-- this is our beans-->
+  
+    <!--Ramu is depenedent on geeta so we will define bean for geeta first-->
+    <bean class="com.springcore.ref.Geeta" name="Geetaref">
+    
+    <property name="y" value="100"/>
+    
+    </bean>
+    <bean class="com.springcore.ref.Ramu" name="Ramuref">
+    <!-- for the first property-->
+    <property name="x" value="500"/>
+    <!--for the secont property we need ref-->
+    	<property name="ob">
+    	 <ref bean="Geetaref" />
+    	</property>    
+    
+    </bean>
+    
+    
+</beans>

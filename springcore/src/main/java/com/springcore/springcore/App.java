@@ -19,10 +19,15 @@ public class App
         //hmne bean(class) aur uski property ki values specify ki hh
         
         
-        
+        //yeh context object hmara container hh isse hmm iske function use krke object le skte
         ApplicationContext context= new ClassPathXmlApplicationContext("config.xml");
         Student s1= (Student) context.getBean("student1");
         System.out.println(s1);
+        Student s2=(Student) context.getBean("student2");
+        System.out.println(s2);
+        //using p schema in config.xml file 
+        Student s3= (Student) context.getBean("student3");
+        System.out.println(s3);
     
     }
 }

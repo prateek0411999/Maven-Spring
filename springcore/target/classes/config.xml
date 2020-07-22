@@ -9,18 +9,37 @@
     
     <!-- this is our beans-->
     <bean class="com.springcore.springcore.Student" name="student1">
-    	<property name="studentId">
-    		<value>100</value>
-    	</property>
+    	<property name="studentId" value="100" />
+    		
     	
-    	<property name="studentName">
+    	
+   <!-- 	<property name="studentName">
     		<value>Prateek Sharma</value>
     	</property>
     	
     	<property name="studentAddress">
     		<value>Panipat, Haryana.</value>
-    	</property>
+    	</property> -->
+    	
+    	<property  name="studentName" value="Prateek Sharma" />
+    	<property  name="studentAddress" value="Panipat, Haryana" />
+    	
     	
     </bean>
+    <!-- second bean -->
+    <bean class="com.springcore.springcore.Student" name="student2">
+    	<property name="studentId" value="101" />
+    		
+ 
+    	
+    	<property  name="studentName" value="Kunal Sharma" />
+    	<property  name="studentAddress" value="Panipat, Haryana" />
+    	
+    	
+    </bean>
+    <!-- using P Schema  that we have declared above-->
+    
+    <bean class="com.springcore.springcore.Student" name="student3" p:studentId="103" p:studentName="Hitesh" p:studentAddress="delhi" />
+    
     
 </beans>
