@@ -7,18 +7,16 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">    
     
-    <context:annotation-config />
     <!-- this is our beans-->
-  <!-- making use of lifecycle methods i.e. init and destory
-  
-  just need to specify in the bean the init-method and destroy-method -->
+    <!-- address bean declare krege firstly -->
     
-    <bean class="com.springcore.lifecycle.Samosa" name="s1" init-method="init" destroy-method="destroy" >
+    <bean class="com.springcore.auto.wire.Address" name="address">
+    	<property name="street" value="Temp street" />
+    	<property name="city" value="Panipat" />
     
-    	<property name="price" value="10" />
     </bean>
+    <bean class="com.springcore.auto.wire.Emp" name="emp" autowire="byType" />
     
-    <bean class="com.springcore.lifecycle.Example" name="example">
-    	<property name="subject" value="Maths" />
-    </bean>
+    	
+    
 </beans>

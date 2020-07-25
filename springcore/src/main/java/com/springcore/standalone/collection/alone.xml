@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">    
+    
+    
+ <!-- standalone collection like ek list hmme 2-3 property m use krni hoti
+ 	toh copy krna padta har bar or standalone collection m specify bhi kr skte hh jese konsi list hh konsa set hh-->
+ 	<!--standalone collection ko bnane k liye we use util schema-->   
+<!--util schema ka namespace add krege line 5 and 10,11-->
+
+<!-- standalone list -->
+
+
+	<util:list list-class="java.util.LinkedList" id="mybestfriends">
+		<value>Aman</value>
+		<value>Ankit</value>
+		<value>Manik</value>
+	
+	</util:list>
+
+	<bean class="com.springcore.standalone.collection.Person" name="person1">
+		
+		<property name="friends">
+		<!-- jo util:list ki id specify ki thi vo property value m as a reference de denge-->
+			<ref  bean="mybestfriends"/>
+		</property>
+		
+		
+		<!--or simply we can do this
+		
+		<property name="friends" ref="mybestfriends" />
+		-->
+		
+		
+	</bean>
+</beans>

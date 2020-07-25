@@ -7,6 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">    
     
+    
+ <!-- standalone collection like ek list hmme 2-3 property m use krni hoti
+ 	toh copy krna padta har bar or standalone collection m specify bhi kr skte hh jese konsi list hh konsa set hh-->
+ 	<!--standalone collection ko bnane k liye we use util schema-->   
 
 <bean class="com.springcore.collections.Emp" name="emp1">
 	<property name="name" value="Radhe" />
@@ -23,16 +27,16 @@
 	
 	<property name="address">
 		<set>
-		<value>Delhi</value>
-		<value>Haryana</value>
-		<value>Punjab</value>
+			<value>Delhi</value>
+			<value>Haryana</value>
+			<value>Punjab</value>
 		</set>
 	</property>
 	
 	<property name="courses">
 		<map>
-		<entry key="java" value="2 months"/>
-		<entry key="python" value="1 month"/>
+			<entry key="java" value="2 months"/>
+			<entry key="python" value="1 month"/>
 		
 		</map>
 	</property>

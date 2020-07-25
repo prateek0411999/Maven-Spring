@@ -1,6 +1,7 @@
 package com.springcore.lifecycle;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
@@ -13,6 +14,11 @@ public class Test {
 		
 		Samosa s=(Samosa) context.getBean("s1");
 		System.out.println(s);
+		
+		
+		Example ex=(Example) context.getBean("example");
+		System.out.println(ex);
+		
 	}
 
 }
