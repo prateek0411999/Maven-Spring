@@ -37,6 +37,8 @@
 //		return jdbcTemplate;
 //	}
 //	
+//
+//
 //	@Bean("studentDao")
 //	public StudentDao getStudentDao()
 //	{
@@ -48,5 +50,10 @@
 //		
 //	}
 //	
+//
+// bss fir apna classpathxmlapplicationcontext ki jaga
+// annotationconfigxmlconfig(JavaConfig.class) use krlege
+//
+//
 //
 //}

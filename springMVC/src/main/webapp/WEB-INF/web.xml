@@ -1,0 +1,30 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+ <!-- step 1 -->  
+ <!--  configure dispatcher server -->
+ <!-- package uthalenge ctrl shift d se --> 
+ 
+ <servlet>
+ 
+ 	<servlet-name>spring</servlet-name>
+ 	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+ 
+ </servlet>
+ 
+ <!-- Now we need to do the mapping -->
+ 
+ <servlet-mapping>
+ 	
+ 	<servlet-name>spring</servlet-name>
+ <!-- to handle all the request we write / in urlpattern -->
+ 	<url-pattern>/</url-pattern>
+ 
+ </servlet-mapping>
+ 
+  
+</web-app>
